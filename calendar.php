@@ -3,20 +3,21 @@
     include "include/header.php";
     include "include/data.php";
     $months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    $semesterMonth = date('M');
+    $semesterMonth = date('F');
     $year = date('Y');
-
+    $semesterTitle = "";
+    
     //pick semester title
         //spring semester
-      if($semesterMonth == 'January' || $semesterMonth == 'February' || $semesterMonth == 'March'  || $semesterMonth == 'March' || $semesterMonth == 'May'){
+      if($semesterMonth == 'January' || $semesterMonth == 'February' || $semesterMonth == 'March'  || $semesterMonth == 'April' || $semesterMonth == 'May'){
         $semesterTitle = "Spring";
        }
          //fall semester
-       else if($semesterMonth == 'August' || $semesterMonth == 'September' || $semesterMonth == 'October'  || $semesterMonth == 'November' || $semesterMonth == 'May'){
+       else if($semesterMonth == 'August' || $semesterMonth == 'September' || $semesterMonth == 'October'  || $semesterMonth == 'November' || $semesterMonth == 'December'){
         $semesterTitle = "Fall";
        }
        // summer semester
-       else{
+       else if($semesterMonth == 'June' || $semesterMonth == 'July' ){
         $semesterTitle = "Summer";
        }
 ?>
